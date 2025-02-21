@@ -21,5 +21,9 @@ val articulos = listOf(articulo1, articulo2, ordenador1, ordenador2)
 ## Responde a las siguientes preguntas:
 
 - ¿De qué tipo genera en la lista por defecto el compilador?
+  - De tipo Articulo
 - ¿Qué está ocurriendo en este ejemplo con respecto a lo que hemos visto del polimorfismo de la herencia?
+  - Que aunque sean clases diferentes al estar heredando una de Articulo se permite juntar en una misma lista sin tener que usar el Any que permitiria otro tipo de valores ademas de las clases padre e hijas
 - ¿Qué pasaría si creáramos la lista con listOf<Ordenador>? ¿Y si la hiciéramos con listOf<Any>?
+  - Que solo permitiria añadir los ordenadores
+  - Que ademas de añadir ambas clases podria añadir String, Int, etc..., lo cual te obligaria a hacer un smart cast si o si, si quiero acceder a alguna de sus funciones, lo cual de la otra forma solo haria falta si se quisiera acceder a una funcion de ordenador que no comparta con Articulo  
