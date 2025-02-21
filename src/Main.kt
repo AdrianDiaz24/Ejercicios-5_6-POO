@@ -8,8 +8,9 @@ fun main(){
     val ordenador2 = Ordenador("HP 1400", 399.99)
     val articulos = listOf<Articulo>(articulo1, articulo2, ordenador1, ordenador2)
 
+
+    var i = 1
     for (articulo in articulos){
-        var i = 1
         println("Articulo $i")
         println(articulo)
         articulo.promocionNavidad(50)

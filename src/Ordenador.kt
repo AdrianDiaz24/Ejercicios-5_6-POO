@@ -1,4 +1,4 @@
-class Ordenador(nombre: String, precio: Double, tipo: TipoOrdenador = TipoOrdenador.BASICO): Articulo(nombre, precio) {
+class Ordenador(nombre: String, precio: Double, val tipo: TipoOrdenador = TipoOrdenador.BASICO): Articulo(nombre, precio) {
 
     override fun promocionNavidad(descuento: Int): Boolean {
         if (precio > 500){
@@ -9,5 +9,8 @@ class Ordenador(nombre: String, precio: Double, tipo: TipoOrdenador = TipoOrdena
         }
     }
 
+    override fun toString(): String {
+        return super.toString() + " - Tipo de ordenador: $tipo"
+    }
 
 }
